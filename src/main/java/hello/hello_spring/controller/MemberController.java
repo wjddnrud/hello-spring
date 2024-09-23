@@ -19,6 +19,7 @@ public class MemberController {
     @Autowired  // 의존성 주입 방식중 생성자 주입 방식을 권장
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
+        System.out.println("memberService = " + memberService.getClass());
     }
 
     @GetMapping("/members/new")
